@@ -21,6 +21,6 @@ class User extends Authenticatable
 
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'availability' => 'json', // Cast availability attribute as JSON
+        'availability' => 'array', // Cast availability attribute as array
     ];
 }

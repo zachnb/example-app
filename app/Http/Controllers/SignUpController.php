@@ -33,12 +33,17 @@ class SignUpController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->english_proficiency = $request->input('english_proficiency');
 
-        // Store availability data
+         // Store availability data as an array
+        $availabilityData = [];
         foreach (['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] as $day) {
-            $availability = $request->input($day . '_availability');
+        $availabilityData[$day] = $request->input($day . '_availability');
+        
+
+        $user->availability = $availabilityData;
         
         // Save the user to the database
         $user->save();
+
         }
 
         // Redirect to a success page

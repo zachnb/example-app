@@ -22,8 +22,8 @@
                 <input type="password" name="password" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="proficiency_level">Proficiency Level</label>
-                <select name="proficiency_level" class="form-control" required>
+                <label for="english_proficiency">Proficiency Level</label>
+                <select name="english_proficiency" class="form-control" required>
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>
                     <option value="advanced">Advanced</option>

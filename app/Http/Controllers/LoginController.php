@@ -14,19 +14,26 @@ class LoginController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->only('username', 'password');
+{
+    $credentials = $request->only('username', 'password');
 
-        if (Auth::attempt($credentials)) {
-            // Authentication successful
-            return redirect()->intended('/'); // Redirect to the intended page or home
+    if (Auth::attempt($credentials)) {
+        // Authentication successful
+        $user = Auth::user();
+        if ($user->english_proficiency === 'beginner') {
+            return redirect()->route('beginner');
+        } elseif ($user->english_proficiency === 'intermediate') {
+            return redirect()->route('intermediate');
+        } elseif ($user->english_proficiency === 'advanced') {
+            return redirect()->route('advanced');
         }
-
-        // Authentication failed
-        return redirect()->back()->withInput($request->only('username'))->withErrors([
-            'login_failed' => 'Invalid username or password',
-        ]);
     }
+
+    // Authentication failed
+    return redirect()->back()->withInput($request->only('username'))->withErrors([
+        'login_failed' => 'Invalid username or password',
+    ]);
+}
 
     public function logout(Request $request)
     {
@@ -37,8 +44,3 @@ class LoginController extends Controller
         return redirect('/');
     }
 }
-
-
-
-
-

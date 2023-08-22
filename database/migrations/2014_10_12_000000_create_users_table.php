@@ -12,10 +12,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('email')->unique();
+            $table->string('username')->unique(); // Make username unique
             $table->string('password');
             $table->string('english_proficiency');
-            $table->string('availability');
+            $table->json('availability'); // Use JSON data type for availability
             $table->timestamps();
         });
     }
