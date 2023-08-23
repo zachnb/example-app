@@ -1,0 +1,90 @@
+/* public/css/cyan-theme.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light Cyan */
+}
+
+/* Center content vertically and horizontally */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align at the top */
+    align-items: center;
+    height: 100vh; /* Set the height to occupy the full viewport height */
+}
+
+/* Header */
+.header {
+    background-color: #00bcd4; /* Cyan */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #00bcd4; /* Cyan */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style for the navbar container */
+.navbar-container {
+    background-color: white;
+    border-bottom: 1px solid #ddd; /* Add a separator line below the navbar */
+    padding: 10px 0; /* Add some padding */
+    margin-bottom: 20px;
+}
+
+/* Center-align the navbar links */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-nav li {
+    margin-right: 20px; /* Add spacing between the links */
+}
+
+/* Style for the navbar links */
+.navbar-nav a {
+    color: #00bcd4; /* Cyan */
+    text-decoration: none;
+}
+
+/* Links */
+a {
+    color: #00bcd4; /* Cyan */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add spacing between labels and text fields */
+.form-group label {
+    margin-bottom: 10px; /* Adjust the margin value as needed */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
+    margin-top: 10px; /* Adjust the margin value as needed */
+}
+
+/* Add spacing between Proficiency Level label and Availability section */
+.form-group select[name="english_proficiency"] {
+    margin-bottom: 10px; /* Adjust the margin value as needed */
+}
