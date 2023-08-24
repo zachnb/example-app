@@ -9,7 +9,7 @@
             </div>
         @endif
 
-        <form method="POST" action="/login">
+        <form method="POST" action="/login" class="form-container">
             @error('login_failed')
                 <div class="alert alert-danger mt-3">
                     {{ $message }}

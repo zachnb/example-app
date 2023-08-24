@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="container">
-        <form method="POST" action="/signup">
+        <form method="POST" action="/signup" class="form-container">
             @csrf
             <div class="form-group">
                 <label for="first_name">First Name</label>
