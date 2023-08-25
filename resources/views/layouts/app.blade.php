@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="{{ asset('css/cyan-theme.css') }}">
 </head>
 <body>
-    <div class="header text-center">
-        <h1>Welcome to the Language App!</h1>
-        <p>Enhance your language skills with our interactive lessons.</p>
-        <p>Sign up now to get started!</p>
+    <div class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="{{ asset('images/logo.png') }}" alt="Company Logo">
+            </a>
+        </div>
     </div>
     <div class="navbar-container">    
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,14 +26,15 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/login">Login</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-
-    <div class="container center-container">
         @yield('content') <!-- Place the content here -->
     </div>
 </body>
